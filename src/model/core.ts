@@ -7,59 +7,27 @@ export default class Core {
     constructor(datasetFromParent: Employee[]) {
         this.dataset = datasetFromParent;
         this.departments = this.generateDepartments();
-        this.generateEmployee();
-        this.generateSalary();
-        this.generateYear();
-        this.getRichest();
-    }
-
-    generateDepartments = ():Department[] => {
-        const initialDepartments = [...new Set(this.dataset.map(employee => {
-            const department:Department = {
-                department: employee.department,
-                average_salary: 0,
-                total_year_of_service: 0,
-                employee: [],
-                richest_employee: null
-            }
-            return department;
-        }))];
-        let uniqueDepartments = new Set();
-        const uniqueArray = initialDepartments.filter(obj => {
-            const isUnique = !uniqueDepartments.has(obj.department);
-            uniqueDepartments.add(obj.department);
-            return isUnique;
-        });
-        return uniqueArray;
-    }
-
-    generateEmployee = () => {
         this.departments.forEach((department, index) => {
-            this.departments[index].employee = this.dataset.filter(employee => employee.department === department.department);
-        })  
-    } 
-
-    generateSalary = () => {
-        this.departments.forEach((department, index) => {
-            const totalSalary = department.employee.reduce((sum, employee) => sum + employee.salary, 0);
-            const averageSalary = totalSalary / department.employee.length;
-            this.departments[index].average_salary = averageSalary;
+            this.departments[index].employee = this.generateEmployee(department);
+            this.departments[index].average_salary = this.generateSalary(department)
+            this.departments[index].total_year_of_service = this.generateYear(department);
+            this.departments[index].richest_employee = this.getRichest(department);
         })
     }
 
-    generateYear = () => {
-        this.departments.forEach((department, index) => {
-            const totalExperience = department.employee.reduce((sum, employee) => sum + employee.experience, 0);
-            this.departments[index].total_year_of_service = totalExperience;
-        })
-    }
+    generateDepartments = ():Department[] => Array.from(new Set(this.dataset.map(employee => ({
+        department: employee.department,
+        average_salary: 0,
+        total_year_of_service: 0,
+        employee: [],
+        richest_employee: null
+    }))), obj => JSON.stringify(obj)).map(str => JSON.parse(str));
 
-    getRichest = () => {
-        this.departments.forEach((department, index) => {
-            const employeeWithMaxSalary = department.employee.reduce((maxSalaryEmployee, currentEmployee) => {
-                return currentEmployee.salary > maxSalaryEmployee.salary ? currentEmployee : maxSalaryEmployee;
-              }, department.employee[0]);
-            this.departments[index].richest_employee = employeeWithMaxSalary;
-        })
-    }
+    generateEmployee = (department:Department) => this.dataset.filter(employee => employee.department === department.department)
+
+    generateSalary = (department:Department) => department.employee.reduce((sum, employee) => sum + employee.salary, 0) / department.employee.length;
+
+    generateYear = (department:Department) => department.employee.reduce((sum, employee) => sum + employee.experience, 0);
+
+    getRichest = (department:Department) => department.employee.reduce((maxSalaryEmployee, currentEmployee) => currentEmployee.salary > maxSalaryEmployee.salary ? currentEmployee : maxSalaryEmployee, department.employee[0]);
 }

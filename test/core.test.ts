@@ -40,9 +40,9 @@ describe("Core", () => {
         const core = new Core(mockData);
         it("Should return avarange salary from department", () => expect(core.departments[0].average_salary).not.toStrictEqual(0))
     })
-    describe("generateYear - Get avarage years of service for department", () => {
+    describe("generateYear - Get years of service for department", () => {
         const core = new Core(mockData);
-        it("Should return avarange salary from department", () => expect(core.departments[0].total_year_of_service).not.toStrictEqual(0))
+        it("Should return years of service from department", () => expect(core.departments[0].total_year_of_service).not.toStrictEqual(0))
     })
     describe("getRichest - Get richest employee for department", () => {
         const core = new Core(mockData);
