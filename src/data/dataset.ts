@@ -1,40 +1,56 @@
 import Employee from "../interface/employee";
 
 export const dataset:Employee[] = [
-    {
-      "name": "Alice",
-      "department": "HR",
-      "salary": 60000,
-      "experience": 3
-    },
-    {
-      "name": "Bob",
-      "department": "Engineering",
-      "salary": 75000,
-      "experience": 5
-    },
-    {
-      "name": "Charlie",
-      "department": "Marketing",
-      "salary": 55000,
-      "experience": 2
-    },
-    {
-      "name": "David",
-      "department": "Engineering",
-      "salary": 80000,
-      "experience": 7
-    },
-    {
-      "name": "Eva",
-      "department": "Marketing",
-      "salary": 60000,
-      "experience": 4
-    },
-    {
-      "name": "Frank",
-      "department": "HR",
-      "salary": 65000,
-      "experience": 6
-    }
-  ] 
+  {"name": "Alice", "department": "HR", "salary": 60000, "experience": 3},
+  {"name": "Bob", "department": "Engineering", "salary": 75000, "experience": 5},
+  {"name": "Charlie", "department": "Marketing", "salary": 55000, "experience": 2},
+  {"name": "David", "department": "Engineering", "salary": 80000, "experience": 7},
+  {"name": "Eva", "department": "Marketing", "salary": 60000, "experience": 4},
+  {"name": "Frank", "department": "HR", "salary": 65000, "experience": 6},
+  {"name": "Grace", "department": "Engineering", "salary": 72000, "experience": 4},
+  {"name": "Harry", "department": "Marketing", "salary": 58000, "experience": 3},
+  {"name": "Ivy", "department": "HR", "salary": 67000, "experience": 5},
+  {"name": "Jack", "department": "Engineering", "salary": 78000, "experience": 8},
+  {"name": "Katie", "department": "Marketing", "salary": 62000, "experience": 6},
+  {"name": "Leo", "department": "HR", "salary": 70000, "experience": 4},
+  {"name": "Mia", "department": "Engineering", "salary": 73000, "experience": 5},
+  {"name": "Nathan", "department": "Marketing", "salary": 56000, "experience": 2},
+  {"name": "Olivia", "department": "HR", "salary": 69000, "experience": 7},
+  {"name": "Peter", "department": "Engineering", "salary": 76000, "experience": 6},
+  {"name": "Quinn", "department": "Marketing", "salary": 59000, "experience": 3},
+  {"name": "Ryan", "department": "HR", "salary": 64000, "experience": 5},
+  {"name": "Sophia", "department": "Engineering", "salary": 71000, "experience": 4},
+  {"name": "Tom", "department": "Marketing", "salary": 63000, "experience": 6},
+  {"name": "Ursula", "department": "HR", "salary": 68000, "experience": 7},
+  {"name": "Vincent", "department": "Engineering", "salary": 79000, "experience": 5},
+  {"name": "Wendy", "department": "Marketing", "salary": 57000, "experience": 2},
+  {"name": "Xander", "department": "Finance", "salary": 66000, "experience": 4},
+  {"name": "Yara", "department": "IT", "salary": 74000, "experience": 3},
+  {"name": "Amy", "department": "Customer Service", "salary": 71000, "experience": 6},
+  {"name": "Ben", "department": "Research and Development", "salary": 77000, "experience": 4},
+  {"name": "Cora", "department": "Operations", "salary": 60000, "experience": 7},
+  {"name": "Dylan", "department": "Legal", "salary": 65000, "experience": 5},
+  {"name": "Eli", "department": "Quality Assurance", "salary": 72000, "experience": 3},
+  {"name": "Fiona", "department": "Sales", "salary": 54000, "experience": 2},
+  {"name": "Gavin", "department": "Public Relations", "salary": 69000, "experience": 6},
+  {"name": "Haley", "department": "Supply Chain", "salary": 78000, "experience": 4},
+  {"name": "Ian", "department": "Information Technology", "salary": 61000, "experience": 5},
+  {"name": "Jordan", "department": "Finance", "salary": 68000, "experience": 3},
+  {"name": "Kelly", "department": "Customer Service", "salary": 73000, "experience": 5},
+  {"name": "Liam", "department": "Research and Development", "salary": 59000, "experience": 2},
+  {"name": "Morgan", "department": "Operations", "salary": 64000, "experience": 6},
+  {"name": "Nora", "department": "Legal", "salary": 70000, "experience": 7},
+  {"name": "Oscar", "department": "Quality Assurance", "salary": 75000, "experience": 5},
+  {"name": "Penny", "department": "Sales", "salary": 56000, "experience": 2},
+  {"name": "Quincy", "department": "Public Relations", "salary": 61000, "experience": 4},
+  {"name": "Riley", "department": "Supply Chain", "salary": 67000, "experience": 5},
+  {"name": "Sam", "department": "Information Technology", "salary": 76000, "experience": 4},
+  {"name": "Taylor", "department": "Finance", "salary": 63000, "experience": 6},
+  {"name": "Uma", "department": "Customer Service", "salary": 70000, "experience": 7},
+  {"name": "Vince", "department": "Research and Development", "salary": 79000, "experience": 5},
+  {"name": "Willow", "department": "Operations", "salary": 57000, "experience": 2},
+  {"name": "Xavier", "department": "Legal", "salary": 66000, "experience": 4},
+  {"name": "Yasmine", "department": "Quality Assurance", "salary": 71000, "experience": 5},
+  {"name": "Zack", "department": "Sales", "salary": 60000, "experience": 6}
+]
+ 

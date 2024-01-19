@@ -30,7 +30,7 @@ describe("Core", () => {
     })
     describe("generateDepartment - First element must be HR obj", () => {
         const core = new Core(mockData);
-        it("Should return name of first department (=HR)", () => expect(core.departments[0].department).toStrictEqual('HR'))
+        it("Should return name of first department (=HR)", () => expect(core.departments[0].name).toStrictEqual('HR'))
     })
     describe("generateEmployee - Get list from employee by department", () => {
         const core = new Core(mockData);
